@@ -1,0 +1,292 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2, h3, h4 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+form {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#subjectsContainer {
+  margin-bottom: 20px;
+}
+
+.subjectName,
+.ca1Score,
+.ca2Score,
+.examScore {
+  margin-bottom: 10px;
+}
+
+
+#resultsContainer {
+  margin-top: 30px;
+  overflow-x: auto; 
+}
+
+
+.student-info {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid #4CAF50; 
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+.results-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-section h4 {
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.comments-section p {
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  border-radius: 4px;
+}
+
+
+select {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+
+.student-info h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.grading-system {
+  margin-top: 20px;
+}
+
+.grading-system table {
+  width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 2px solid green;
+}
+
+.grading-system th, .grading-system td {
+  border: 1px solid green;
+  padding: 8px;
+  text-align: center;
+}
+
+.grading-system th {
+  background-color: #eaffea;
+}
+
+.grading-system td {
+  background-color: #f9fff9;
+}
+
+@media print {
+  body {
+      font-size: 12px; 
+  }
+
+  .container {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+  }
+
+  .student-info {
+      border: 2px solid #4CAF50; 
+      margin-bottom: 20px;
+      padding: 15px;
+  }
+
+  .results-table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  .results-table th, .results-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+  }
+
+  .results-table th {
+      background-color: #4CAF50;
+      color: white;
+  }
+
+  .results-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+  }
+
+  .comments-section {
+      margin-top: 20px;
+  }
+
+  .grading-system {
+      margin-top: 20px;
+  }
+
+  button, #addSubjectBtn {
+      display: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+      width: 95%;
+      padding: 10px;
+  }
+
+  .results-table th, .results-table td {
+      font-size: 0.9em;
+      padding: 6px;
+  }
+
+  .grading-system table {
+      width: 100%;
+  }
+
+
+  .results-table {
+      table-layout: auto; 
+  }
+
+  .results-table th, .results-table td {
+      white-space: normal; 
+      word-wrap: break-word; 
+      font-size: 0.85em; 
+  }
+
+  .results-table th,
+  .results-table td {
+      display: block; 
+      width: 100%; 
+  }
+
+  .results-table tr {
+      display: flex; 
+      flex-direction: column; 
+      margin-bottom: 10px; 
+  }
+}
